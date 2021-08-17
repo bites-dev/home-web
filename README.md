@@ -1,2 +1,4 @@
-# home-web
-Bites Dev Home Web
+# Bites Dev. Home Website
+
+Hello World!
+We are Bites Dev.

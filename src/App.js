@@ -5,7 +5,7 @@ import AppBar from './components/AppBar.jsx'
 import Home from './components/Home.jsx'
 
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
 	root: {
 		background: "linear-gradient(90deg, rgba(161, 99, 240, 1), rgba(44, 15, 224, 1))",
 	},
@@ -41,7 +41,7 @@ const useStyles = makeStyles({
 		filter: "blur(40px)",
 		zIndex: "0",
 	},
-})
+}))
 
 export default function App() {
   const classes = useStyles()

@@ -1,19 +1,6 @@
 import { makeStyles } from '@material-ui/core'
 
-const useStyles = makeStyles({
-	// root: {
-	// 	background: "linear-gradient(90deg, rgba(161, 99, 240, 1), rgba(44, 15, 224, 1))",
-	// },
-	// mainContainer : {
-	// 	display: "flex",
-	// 	alignItems: "center",
-	// 	minHeight: "100vh",
-	// 	width: "100vw",
-	// 	background: "transparent",
-	// 	backgroundImage: "linear-gradient(to right, rgba(255, 255, 255, 0.36) 1px, transparent 1px)",
-	// 	backgroundSize: "350px",
-	// 	backgroundPosition: "260px",
-	// },
+const useStyles = makeStyles((theme) => ({
 	redCircle : {
 		position: "absolute",
 		top: "24%",
@@ -24,6 +11,13 @@ const useStyles = makeStyles({
 		borderRadius: "50%",
 		filter: "blur(40px)",
 		zIndex: "0",
+		[theme.breakpoints.down('sm')]: {
+			top: "30%",
+			right: "15%",
+			height: "230px",
+			width: "230px",
+			filter: "blur(28px)",
+		},
 	},
 	blueCircle : {
 		position: "absolute",
@@ -35,15 +29,41 @@ const useStyles = makeStyles({
 		borderRadius: "50%",
 		filter: "blur(40px)",
 		zIndex: "0",
+		[theme.breakpoints.down('sm')]: {
+			top: "50%",
+			right: "45%",
+			height: "140px",
+			width: "140px",
+			filter: "blur(28px)",
+		},
 	},
 	title : {
 		marginLeft: "1em", 
     color: "white",
-		fontSize: "6em",
-		lineHeight: "90px",
 		zIndex: "9",
+		
+		[theme.breakpoints.down('sm')]: {
+			marginLeft: ".1em", 
+			lineHeight: "80px",
+			fontSize: "2.5em",
+			textAlign: "center"
+		},
+		[theme.breakpoints.between('sm', 'md')]: {
+			marginLeft: ".5em", 
+			lineHeight: "60px",
+			fontSize: "3.3em",
+		},
+		[theme.breakpoints.between('md', 'lg')]: {
+			lineHeight: "70px",
+			fontSize: "4.5em",
+		},
+		[theme.breakpoints.up('lg')]: {
+			lineHeight: "90px",
+			fontSize: "6em",
+			
+		}
 	},
-})
+}))
 
 export default function Home() {
 	const classes = useStyles()

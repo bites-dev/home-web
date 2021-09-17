@@ -19,28 +19,6 @@ const useStyles = makeStyles((theme) => ({
 		backgroundSize: "350px",
 		backgroundPosition: "260px",
 	},
-  redCircle : {
-		position: "absolute",
-		top: "25%",
-		right: "29%",
-		background: "rgb(255, 0, 46)",
-		height: "350px",
-		width: "350px",
-		borderRadius: "50%",
-		filter: "blur(40px)",
-		zIndex: "0",
-	},
-	blueCircle : {
-		position: "absolute",
-		top: "50%",
-		right: "50%",
-		background: "rgb(0, 133, 255)",
-		height: "200px",
-		width: "200px",
-		borderRadius: "50%",
-		filter: "blur(40px)",
-		zIndex: "0",
-	},
 }))
 
 export default function App() {
